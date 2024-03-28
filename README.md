@@ -35,5 +35,40 @@ Now ga_sample_data google sheets shows up as a connected database.
 ![Screenshot 2024-03-28 211437](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/c97e5938-85ba-417f-88ee-5b6cf236cf90)
 
 ## Import packages🗳️
+```
+import pandas as pd
+import plotly.express as px
+```
+## Clean the data⚔️
+```
+# we can make a copy first inorder to make changes that won't override the original dataframe and cause major repercussions incase we didn't want the changes anymore. Also imporatant to attach a time zone to your time stamp.
+df_clean=df.copy()
+df_clean['visitStartTime']=pd.to_datetime(df_clean['visitStartTime'],unit='s').dt.tz_localize('UTC')
+df_clean
+```
+This is after we looked at the datatypes of the different variables and found out the column visitStarttime is of type integer instead of timestamp
+![Screenshot 2024-03-28 213207](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/a251c6e1-1150-47d3-9a28-1ed69d6978d4)
 
+After changing datatype and adding a timezone:
+![Screenshot 2024-03-28 213437](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/3cce147e-510a-4860-8d13-2ddc769f800a)
 
+## Explore the data👩‍🚀
+- Use the predefined plotting function to explore different grouped session counts as either a bar chart or a pie chart.
+  ```
+  def plot_sessions_per_group(df, group, viz_type='bar'):
+    sessions_per_group = df.groupby(group).size().reset_index(name='sessions').sort_values(by='sessions')
+    if viz_type == 'bar':
+        return px.bar(sessions_per_group,
+                      x=group,
+                      y='sessions',
+                      title=f'Number of sessions per {group}',
+                      text='sessions')
+    elif viz_type == 'pie':
+        return px.pie(sessions_per_group,
+                      names=group,
+                      values='sessions',
+                      title=f'Distribution of sessions per {group}')
+    else:
+        raise ValueError("viz_type can only be 'bar' or 'pie'")
+  ```
+  
