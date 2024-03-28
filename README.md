@@ -11,5 +11,25 @@ The data provides insights into what drives sales into the ecommerce website.
   - Basic understanding of SQL concepts
   - Python
 
-## Getting started
+## Getting started🏴
+- Download the dataset which is inform of a google sheet and copy it to your google drive.
+- click the plus icon on the top left space near the word databases.
+  ![Screenshot 2024-03-28 210521](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/101febbf-8fc3-4565-b36a-68039462aa38)
+- 
+choose the google sheets option
 
+![Screenshot 2024-03-28 210707](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/79de50bf-99bd-4be6-b683-bd2008a3c012)
+ Choose a sheet
+ 
+![Screenshot 2024-03-28 210822](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/0a8f38c7-b079-4ce9-a2ef-0be4e5eff690)
+Now ga_sample_data google sheets shows up as a connected database.
+
+![Screenshot 2024-03-28 211015](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/fbd2cf60-02d1-4104-9401-51391fcd1e98)
+
+- Import session data using basic sql statement 
+- select * from ga_sessions
+  ![Screenshot 2024-03-28 211259](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/f0533d92-56b9-48b8-9183-0e55b34a357d)
+
+  - the datacamp workspace is an integration of sql and python languages. So the google sheet automatically available as a dataframe.
+  
+![Screenshot 2024-03-28 211437](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/c97e5938-85ba-417f-88ee-5b6cf236cf90)
