@@ -72,3 +72,16 @@ After changing datatype and adding a timezone:
         raise ValueError("viz_type can only be 'bar' or 'pie'")
   ```
   
+- Explore after asking different questions related to what we would want to know
+  for instance we can plot the number of sessions on  the ecommerce website, per continent. Use the function plot_sessions_per_group and take the dataframe and continent as inputs.
+  ```
+  plot_sessions_per_group(df_clean,'continent')
+  ```
+  ![Screenshot 2024-03-28 220345](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/ea0a5fbe-4cc0-4d1f-834f-3f7fe183506a)
+   Distribution of sessions per device category and set the visualization type to pie
+  ```
+  plot_sessions_per_group(df_clean,'deviceCategory', viz_type='pie')
+  ```
+  ![Screenshot 2024-03-28 220537](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/8f2dcf01-ee7e-47fc-a692-628c7f4ac20b)
+
+  
