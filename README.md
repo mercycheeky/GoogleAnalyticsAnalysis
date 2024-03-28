@@ -33,3 +33,7 @@ Now ga_sample_data google sheets shows up as a connected database.
   - the datacamp workspace is an integration of sql and python languages. So the google sheet automatically available as a dataframe.
   
 ![Screenshot 2024-03-28 211437](https://github.com/mercycheeky/GoogleAnalyticsAnalysis/assets/56400871/c97e5938-85ba-417f-88ee-5b6cf236cf90)
+
+## Import packages🗳️
+
+
